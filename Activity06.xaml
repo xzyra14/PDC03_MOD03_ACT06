@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD03_Activity06" Title="Display Image">
+    <ContentPage.Content>
+
+        <Grid>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." />
+                        <Image Source="beach"
+                               Aspect="Fill"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="Center"
+                               HeightRequest="{OnPlatform iOS=300, Android=250}" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Label Text="Name"/>
+                        <Entry Placeholder="Enter Name" />
+                        <Label Text="Password"/>
+                        <Entry Placeholder="Enter Password" />
+                    </StackLayout>
+                    <StackLayout>
+                        <Button x:Name="btnLogin"
+                                Text="Login"/>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" 
+                               Color="Blue" 
+                               HorizontalOptions="Center"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
